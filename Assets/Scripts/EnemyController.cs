@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour
     public int EnemyEXP;
     public static int m_damage;
     public GameObject EXP;
+    public GameObject AllCollect;
 
     // ìGÇÃèoåªà íuÇÃéÌóﬁ
     public enum RESPAWN_TYPE
@@ -88,6 +89,11 @@ public class EnemyController : MonoBehaviour
             {
                 Debug.Log("åÇîj");
                 Instantiate(EXP, transform.position, Quaternion.identity);
+                int r = Random.Range(1, 1001);
+                if (r == 1000)
+                {
+                    Instantiate(AllCollect, transform.position, Quaternion.identity);
+                }
                 Destroy(gameObject);
             }
         }

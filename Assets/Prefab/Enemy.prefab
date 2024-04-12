@@ -175,3 +175,4 @@ MonoBehaviour:
   m_respawnPosOutside: {x: 0, y: 0}
   EnemyEXP: 1
   EXP: {fileID: 8986517859462988770, guid: 389cd2aa99388d6468f827ed10add90c, type: 3}
+  AllCollect: {fileID: 4532406993490166570, guid: 1ef59f4613471b246b3746640f176b5d, type: 3}
