@@ -16,7 +16,7 @@ public class EnemyManager : MonoBehaviour
     }
 
     // 毎フレーム呼び出される関数
-    private void Update()
+    private void FixedUpdate()
     {
         // 出現タイミングを管理するタイマーを更新する
         m_timer += Time.deltaTime;

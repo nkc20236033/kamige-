@@ -7,7 +7,7 @@ public class CamCon : MonoBehaviour
     //í«â¡Å@XÇ∆YÇÃè„å¿
     float yLimit = 0f;
 
-    void Update()
+    void FixedUpdate()
     {
         Vector3 currentPos = transform.position;
 

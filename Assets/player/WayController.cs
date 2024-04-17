@@ -13,7 +13,7 @@ public class WayController : MonoBehaviour
         player = GameObject.Find("Player");
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         // プレイヤーのスクリーン座標を計算する
         var screenPos = Camera.main.WorldToScreenPoint(transform.position);

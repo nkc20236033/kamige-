@@ -27,7 +27,7 @@ public class TimeManager : MonoBehaviour
         Timeflg = 0;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         seconds += Time.deltaTime;
         if (seconds >= 60f)

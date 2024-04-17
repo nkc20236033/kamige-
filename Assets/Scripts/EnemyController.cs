@@ -37,7 +37,7 @@ public class EnemyController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 pv = player.transform.position;
         Vector3 ev = transform.position;

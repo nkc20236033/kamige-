@@ -14,7 +14,7 @@ public class EXPController : MonoBehaviour
         player = GameObject.FindGameObjectsWithTag("Player")[0];
     }
     
-    void Update()
+    void FixedUpdate()
     {
         //‘SûW
         if (PlayerController.EXPflg == 1)

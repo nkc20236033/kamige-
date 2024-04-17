@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
         playerHP = 3;
     }
     
-    void Update()
+    void FixedUpdate()
     {
         Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"),  Input.GetAxis("Vertical"));
         moveDirection.Normalize();

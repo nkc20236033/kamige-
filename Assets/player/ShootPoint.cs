@@ -13,7 +13,7 @@ public class ShootPoint : MonoBehaviour
         
     }
 
-    void Update()
+    void FixedUpdate()
     {
         timer += 1;
         if (timer % 20 == 0)
