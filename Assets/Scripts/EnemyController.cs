@@ -17,6 +17,9 @@ public class EnemyController : MonoBehaviour
     public GameObject EXP;
     public GameObject AllCollect;
 
+    ScoreLabel score;  //“G‚ğ“|‚µ‚½‚ÌƒXƒRƒA
+    CountLabel cnt;   //“G‚ğ“|‚µ‚½”
+
     // “G‚ÌoŒ»ˆÊ’u‚Ìí—Ş
     public enum RESPAWN_TYPE
     {
@@ -34,6 +37,9 @@ public class EnemyController : MonoBehaviour
 
         EnemyHP = 10;
         m_damage = 10;
+
+        cnt = GameObject.Find("Count").GetComponent<CountLabel>();
+        score = GameObject.Find("Score").GetComponent<ScoreLabel>();
     }
 
     // Update is called once per frame
@@ -88,6 +94,8 @@ public class EnemyController : MonoBehaviour
             if (EnemyHP <= 0)
             {
                 Debug.Log("Œ‚”j");
+                score.ScoreAdd();
+                cnt.CountAdd();
                 Instantiate(EXP, transform.position, Quaternion.identity);
                 int r = Random.Range(1, 1001);
                 if (r == 1000)
