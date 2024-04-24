@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TitleButton : MonoBehaviour
 {
-    public void OnClick() 
+    public void OnClick()
     {
         SceneManager.LoadScene("TitleScene");
     }

@@ -475,6 +475,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8667966828015580537, guid: 8f6bca9996993a34f9036c5b44ddac7f, type: 3}
   m_PrefabInstance: {fileID: 6282069252068424725}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1585378089 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2473512482496322557, guid: 8f6bca9996993a34f9036c5b44ddac7f, type: 3}
+  m_PrefabInstance: {fileID: 6282069252068424725}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e5b3afcc12d134fb06090d365fb2c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2140850919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -589,6 +600,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1101704477}
     m_Modifications:
+    - target: {fileID: 3325680123606177576, guid: 8f6bca9996993a34f9036c5b44ddac7f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1585378089}
+    - target: {fileID: 3325680123606177576, guid: 8f6bca9996993a34f9036c5b44ddac7f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClick
+      objectReference: {fileID: 0}
     - target: {fileID: 5474004926755951529, guid: 8f6bca9996993a34f9036c5b44ddac7f, type: 3}
       propertyPath: m_Name
       value: TitleButton
