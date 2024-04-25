@@ -18,12 +18,6 @@ public class CamCon : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 currentPos = transform.position;
-
-        currentPos.y = yLimit;
-
-        transform.position = currentPos;
-
-        transform.position = playerObj.transform.position + offset;
+        transform.position = new Vector3(playerObj.transform.position.x + offset.x, yLimit, playerObj.transform.position.y + offset.y);
     }
 }
