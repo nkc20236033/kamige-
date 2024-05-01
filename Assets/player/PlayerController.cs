@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     public int playerHP;
+    public GameObject heart;
     public static Vector2 playerpos;
     public static  int playerEXP;          //経験値量
     float EXPlimit = 10;    //必要経験値量
@@ -52,6 +53,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             playerHP--;
+           
         }
 
         if (collision.gameObject.CompareTag("EXP"))
