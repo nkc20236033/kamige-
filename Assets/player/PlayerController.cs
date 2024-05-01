@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,12 +18,11 @@ public class PlayerController : MonoBehaviour
 
     public static int EXPflg;      //全回収用フラグ
 
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        playerHP = 3;
+        playerHP = 4;
     }
     
     void FixedUpdate()
@@ -44,16 +44,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public void DestroyHeart()
     {
-
+        Destroy(transform.GetChild(0).gameObject);
     }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             playerHP--;
-           
+            DestroyHeart();
         }
 
         if (collision.gameObject.CompareTag("EXP"))
