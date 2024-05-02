@@ -12,7 +12,7 @@ public class CaveGenerator : MonoBehaviour
     float offsetY = 1020;
 
     // 高さ調整用
-    float heightScale = 50.0f;
+    float heightScale = 20.0f;
     // パーリンノイズの読み取り間隔
     float xScale = 0.02f;
     // Unity状で実際に配置する間隔
