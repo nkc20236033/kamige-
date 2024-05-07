@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +9,6 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     public int playerHP;
-    public GameObject heart;
     public static Vector2 playerpos;
     public static  int playerEXP;          //経験値量
     float EXPlimit = 10;    //必要経験値量
@@ -18,11 +16,12 @@ public class PlayerController : MonoBehaviour
 
     public static int EXPflg;      //全回収用フラグ
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        playerHP = 4;
+        playerHP = 3;
     }
     
     void FixedUpdate()
@@ -44,17 +43,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void DestroyHeart()
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(transform.GetChild(0).gameObject);
-    }
 
+    }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             playerHP--;
-            DestroyHeart();
         }
 
         if (collision.gameObject.CompareTag("EXP"))
